@@ -17,14 +17,22 @@ def scrape_data(driver, url):
     book_name = driver.find_element(By.ID, 'productTitle').text
 
     # get author(s) name, if more than 1 author join them with comma (,)
-    author = driver.find_element(By.ID, "moreAboutTheAuthorCard_feature_div").find_elements(By.TAG_NAME, 'h2')[1:]
-    if len(author) >= 2:
-        authors = ','.join([auth.text for auth in author])
-    else:
-        authors = [auth.text for auth in author][0]
+    try:
+        author = driver.find_element(By.ID, "moreAboutTheAuthorCard_feature_div").find_elements(By.TAG_NAME, 'h2')[1:]
+        if len(author) >= 2:
+            authors = ','.join([auth.text for auth in author])
+        else:
+            authors = [auth.text for auth in author][0]
+    
+    except IndexError:
+        author = driver.find_element(By.ID, 'bylineInfo').find_elements(By.CSS_SELECTOR, 'span.author.notFaded')
+        if len(author) > 1:
+            authors = ','.join([auth.text.replace(' (Author),', '') for auth in author if "Author" in auth.text])
+        else:
+            authors = [auth.text.replace(' (Author)') for auth in author][0]
 
     # get book details
-    details = [d.text[d.text.find(":")+1:].strip() for d in driver.find_element(By.ID, "detailBulletsWrapper_feature_div").find_elements(By.TAG_NAME, 'li')]
+    details = [d.text for d in driver.find_element(By.ID, "detailBulletsWrapper_feature_div").find_elements(By.TAG_NAME, 'li')]
 
     # get book price
     try:
@@ -36,13 +44,22 @@ def scrape_data(driver, url):
     # update the dictionary
     contents['book_name'] = book_name
     contents['author(s)'] = authors
-    contents['publisher'] = re.split(pattern=r"[;(]", string=details[0])[0]
-    contents['language'] = details[1]
-    contents['#pages'] = int(details[2].split(' ')[0])
-    contents['best_seller_rank'] = int(re.split(pattern=r"[;#( ]", string=details[-5])[1].replace(',', ''))
-    contents['customer_reviews'] = float(details[-1].split('\n')[0])
-    contents['total_ratings'] = int(details[-1].split('\n')[1].split(' ')[0].replace(',', ''))
+    contents['publisher'] = [re.split(pattern=r"[;:(]", string=details[0])[1].strip()\
+                             if "Publisher" in details[0] else "Self Publication"][0]
+    contents['Language'] = [re.split(pattern=r"[;:(]", string=details[1])[1].strip()\
+                            if "Language" in details[1] else "Null"][0]
+    contents['#pages'] = [re.split(pattern=r"[;:(]", string=details[2])[1].split(' ')[1].strip()\
+                            if "Paperback" in details[2] else "Null"][0]
+    contents['best_seller_rank'] = [re.split(pattern=r"[:;#( ]", string=details[-5])[5].replace(',', '').strip()\
+                                   if "Best Sellers Rank" in details[-5] else "Null"][0]
+    
+    contents['customer_reviews'] = [re.split(pattern="[:\n]", string=details[-1])[1].strip()\
+                                    if "Customer Reviews" in details[-1] else "0"]
+    contents['total_ratings'] = [re.split(pattern="[:\n]", string=details[-1])[2].split(' ')[0]\
+                                 if "ratings" in details[-1] else "0"]
+    contents['url'] = url
     contents['price($)'] = float(price.text.replace("$", ''))
+    
 
     return contents
 
