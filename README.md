@@ -1,11 +1,30 @@
 # Amazon data science book visualizations
 
-## Build from Sources
+## Problem statement
+The goal of this project is to gather information of Data Science realted books from amazon. </br>
+Later we utlizied the scrape data to understand the following demographics and correlations using [Tableau](https://www.tableau.com/) Dashboard: </br>
+1. A barchart of top 15 publisher by the amount of books published
+2. Average price of books by the top 15 publishers
+3. Price range of books
+4. Counts of top rated books (rating 4.2 - 5.0)
+5. Pages vs Price trend
+6. Average reviews of Top 15 publishers </br>
+
+## Findings and Observations from the [Dashboard](https://public.tableau.com/app/profile/tasfiq.kamran/viz/amzn_ds_books_dashboard/Dashboard1)
+1. Packt has the highest publication of books
+2. Springer has the highest average price 
+3. As the pages increase the price of the books is increased
+4. Price of the most books fall around the range between (25.00 - 65-00) USD
+
+You can visit the public dashboard [here](https://public.tableau.com/app/profile/tasfiq.kamran/viz/amzn_ds_books_dashboard/Dashboard1): 
+
+
+## Build from Sources and run the selenium driver
 1. Clone the repo
 ```bash
 git clone https://github.com/Tasfiq-K/amazon-data-science-books.git
 ```
-2. Initiaize and activate virtual environment </br>
+2. Initiaize and activate virtual environment </br> 
 If you are running Python 3.4+, you can use the venv module baked into Python:
 ```bash
 python -m venv <directory name>

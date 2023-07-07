@@ -58,7 +58,6 @@ def scrape_data(driver, url):
                         except NoSuchElementException:
                             price = driver.find_element(By.ID, 'tmmSwatches').find_element(By.CSS_SELECTOR, 'span.a-color-base')
                             return price
-                
 
     contents = {}
     driver.get(url)
@@ -113,7 +112,7 @@ def scrape_data(driver, url):
 
 def main():
     # initializing the driver and firefox profile
-    webdriver_path = parser.geckodriver_path
+    webdriver_path = args.geckodriver_path
     options = Options()
     options.set_preference('profile', webdriver_path)
     driver = Firefox(options=options)
@@ -145,7 +144,7 @@ def main():
             toc = time.perf_counter()
             print(f"Completed Page {page_num}, Took about {(toc - tic) // 60} Mins, {(toc - tic) % 60} Sec(s)")
 
-    
+
     # print(data_rows)        
 
     driver.close()
