@@ -1,13 +1,21 @@
+import re
+import time
+import random
+import argparse
+import pandas as pd
+
 from selenium.webdriver import Firefox
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-import re
-import time
-import random
-import pandas as pd
 
-columns = ["book_name", "author(s)", "publisher", "language", "#pages", "best_seller_rank", "customer_reviews", "total_ratings", "url", "paperback_price($)"]
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--geckodriver_path', type=str, help="Check where the geckodriver is in your PC")
+args = parser.parse_args()
+
+columns = ["book_name", "author(s)", "publisher", "language", "#pages", "best_seller_rank", 
+           "customer_reviews", "total_ratings", "url", "paperback_price($)"]
 
 
 
@@ -66,7 +74,7 @@ def scrape_data(driver, url):
             authors = ','.join([auth.text for auth in author])
         else:
             authors = [auth.text for auth in author][0]
-    
+
     except IndexError or NoSuchElementException:
         author = driver.find_element(By.ID, 'bylineInfo').find_elements(By.CSS_SELECTOR, 'span.author.notFaded')
         if len(author) > 1:
@@ -105,7 +113,7 @@ def scrape_data(driver, url):
 
 def main():
     # initializing the driver and firefox profile
-    webdriver_path = "/usr/local/bin"
+    webdriver_path = parser.geckodriver_path
     options = Options()
     options.set_preference('profile', webdriver_path)
     driver = Firefox(options=options)
