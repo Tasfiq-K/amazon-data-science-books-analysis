@@ -1,16 +1,18 @@
 # Amazon data science book visualizations
 
 ## Problem statement
-The goal of this project is to gather information of Data Science realted books from amazon. </br>
+The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `amazon_data_science_books.csv` file. </br>
 Later we utlizied the scrape data to understand the following demographics and correlations using [Tableau](https://www.tableau.com/) Dashboard: </br>
-1. A barchart of top 15 publisher by the amount of books published
-2. Average price of books by the top 15 publishers
-3. Price range of books
-4. Counts of top rated books (rating 4.2 - 5.0)
+1. A pie chart showing the number of books published by the top 15 publishers and the others.
+2. A barchart of top 15 publisher by the amount of books published
+3. Average price of books by the top 15 publishers
+4. Price range of books
 5. Pages vs Price trend
-6. Average reviews of Top 15 publishers </br>
+6. Top 100 books by user reviews (rating 4.0 - 5.0)
+7. Average reviews of Top 15 publishers </br>
 
 ## Findings and Observations from the [Dashboard](https://public.tableau.com/app/profile/tasfiq.kamran/viz/amzn_ds_books_dashboard/Dashboard1)
+1. Among the 1324 books (after preprocessing the data) 948 of them are published by only 15 publications.
 1. Packt has the highest publication of books
 2. Springer has the highest average price 
 3. As the pages increase the price of the books is increased
