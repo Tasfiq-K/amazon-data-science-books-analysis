@@ -3,12 +3,12 @@
 ## Problem statement
 The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `amazon_data_science_books.csv` file. </br>
 Later we utlizied the scrape data to understand the following demographics and correlations using [Tableau](https://www.tableau.com/) Dashboard: </br>
-1. A pie chart showing the number of books published by the top 15 publishers and the others.
+1. A doughnut chart showing the number of books published by the top 15 publishers and the others.
 2. A barchart of top 15 publisher by the amount of books published
 3. Average price of books by the top 15 publishers
 4. Price range of books
 5. Pages vs Price trend
-6. Top 100 books by user reviews (rating 4.0 - 5.0)
+6. Top books by user reviews (rating 4.0 - 5.0)
 7. Average reviews of Top 15 publishers </br>
 
 ## Findings and Observations from the [Dashboard](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/Dashboard1)
