@@ -11,14 +11,14 @@ Later we utlizied the scrape data to understand the following demographics and c
 6. Top 100 books by user reviews (rating 4.0 - 5.0)
 7. Average reviews of Top 15 publishers </br>
 
-## Findings and Observations from the [Dashboard](https://public.tableau.com/app/profile/tasfiq.kamran/viz/amzn_ds_books_dashboard/Dashboard1)
+## Findings and Observations from the [Dashboard](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/Dashboard1)
 1. Among the 1324 books (after preprocessing the data) 948 of them are published by only 15 publications.
 1. Packt has the highest publication of books
 2. Springer has the highest average price 
 3. As the pages increase the price of the books is increased
 4. Price of the most books fall around the range between (25.00 - 65-00) USD
 
-You can visit the public dashboard [here](https://public.tableau.com/app/profile/tasfiq.kamran/viz/amzn_ds_books_dashboard/Dashboard1): 
+You can visit the public dashboard [here](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/Dashboard1): 
 
 
 ## Build from Sources and run the selenium driver
@@ -62,4 +62,4 @@ python scraper.py --geckodriver_path <path_to_chromedriver>
 6. You will get a file with the following name `amazon_data_science_books.csv` containing all the required fields and data. Alternatively, check the scraped data [here](https://github.com/Tasfiq-K/amazon-data-science-books/blob/main/amazon_data_science_books.csv)
 
 ## Analytics
-Tableau Public View: https://public.tableau.com/app/profile/tasfiq.kamran/viz/amzn_ds_books_dashboard/Dashboard1
+Tableau Public View: https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/Dashboard1
