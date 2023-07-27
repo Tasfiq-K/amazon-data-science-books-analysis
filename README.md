@@ -1,4 +1,4 @@
-# Amazon Data Science Book Analysis & Visualizations
+# Amazon Data Science Books; Analysis & Visualizations
 
 ## Problem statement
 The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `amazon_data_science_books.csv` file. </br>
