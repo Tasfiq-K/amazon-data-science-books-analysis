@@ -1,4 +1,4 @@
-# Amazon data science book visualizations
+# Amazon Data Science Book Analysis & Visualizations
 
 ## Problem statement
 The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `amazon_data_science_books.csv` file. </br>
@@ -24,7 +24,7 @@ You can visit the public dashboard [here](https://public.tableau.com/app/profile
 ## Build from Sources and run the selenium driver
 1. Clone the repo
 ```bash
-git clone https://github.com/Tasfiq-K/amazon-data-science-books.git
+git clone https://github.com/Tasfiq-K/amazon-data-science-books-analysis.git
 ```
 2. Initiaize and activate virtual environment </br> 
 If you are running Python 3.4+, you can use the venv module baked into Python:
@@ -35,15 +35,15 @@ for example, if you name your directory 'venv', then run this command:
 ```bash
 python -m venv venv
 ```
-For activating the virtual environmet run:
-On Windows:
+For activating the virtual environmet run:</br>
+On **Windows**
 ```bash
 # In cmd.exe
 venv\Scripts\activate.bat
 # In Powershell
 venv\Scripts\activate.psl
 ```
-On Linux or MacOs
+On **Linux** or **MacOs**
 ```bash
 $ source venv/bin/activate
 ```
