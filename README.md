@@ -25,7 +25,12 @@ Later we utlizied the scraped data to understand the following demographics and 
 3. As the pages increase, the price of the books increases.
 4. Price of the most books fall around the range between (14.00 - 60-00) USD
 
-You can visit the public dashboard [here](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/AmazonDataScienceBooks): 
+You can visit the public dashboard [here](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/AmazonDataScienceBooks)
+
+First look on the dashboard
+<img src="screenshots/dashboard.png" width="700" height="250"></br>
+Also, try clicking the bars on the bar plots, and see the changes.
+<img src="screenshots/highlighted.png" width="700" height="250">
 
 
 ## Build from Sources and run the selenium driver
