@@ -22,7 +22,7 @@ Later we utlizied the scraped data to understand the following demographics and 
 1. Packt has the highest publication of books
 2. Springer has the highest average price 
 3. As the pages increase the price of the books is increased
-4. Price of the most books fall around the range between (25.00 - 65-00) USD
+4. Price of the most books fall around the range between (14.00 - 60-00) USD
 
 You can visit the public dashboard [here](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/AmazonDataScienceBooks): 
 
