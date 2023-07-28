@@ -7,7 +7,7 @@
 
 
 ## Problem statement
-The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `[csv_files/amazon_data_science_books.csv]`(https://github.com/Tasfiq-K/amazon-data-science-books-analysis/blob/main/csv_files/amazon_data_science_books.csv) file. </br>
+The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the [`csv_files/amazon_data_science_books.csv`](https://github.com/Tasfiq-K/amazon-data-science-books-analysis/blob/main/csv_files/amazon_data_science_books.csv) file. </br>
 Later we utlizied the scraped data to understand the following demographics and correlations using [Tableau](https://www.tableau.com/) Dashboard: </br>
 1. A doughnut chart showing the number of books published by the top 15 publishers and the others.
 2. A barchart of top 15 publisher by the amount of books published
