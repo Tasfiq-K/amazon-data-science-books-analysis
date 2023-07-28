@@ -7,7 +7,7 @@
 
 
 ## Problem statement
-The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `csv_files/amazon_data_science_books.csv` file. </br>
+The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `[csv_files/amazon_data_science_books.csv]`(https://github.com/Tasfiq-K/amazon-data-science-books-analysis/blob/main/csv_files/amazon_data_science_books.csv) file. </br>
 Later we utlizied the scraped data to understand the following demographics and correlations using [Tableau](https://www.tableau.com/) Dashboard: </br>
 1. A doughnut chart showing the number of books published by the top 15 publishers and the others.
 2. A barchart of top 15 publisher by the amount of books published
@@ -18,10 +18,11 @@ Later we utlizied the scraped data to understand the following demographics and 
 7. Average reviews of Top 15 publishers </br>
 
 ## Findings and Observations from the [Dashboard](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/AmazonDataScienceBooks)
+### Note: Try viewing the [Dashboard](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/AmazonDataScienceBooks) in **Full Screen** mode. </br>
 1. Among the 1324 books (after preprocessing the data) 948 of them are published by only 15 publications.
 1. Packt has the highest publication of books
 2. Springer has the highest average price 
-3. As the pages increase the price of the books is increased
+3. As the pages increase, the price of the books increases.
 4. Price of the most books fall around the range between (14.00 - 60-00) USD
 
 You can visit the public dashboard [here](https://public.tableau.com/app/profile/tasfiq.kamran/viz/AmazonDataScienceBooksDashboard/AmazonDataScienceBooks): 
