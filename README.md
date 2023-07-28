@@ -1,9 +1,9 @@
 # Amazon Data Science Books; Analysis & Visualizations
 
 ## Folder Structure
-* `csv_files` contains the processed and un-processed csv files.
-* `notebooks` contains the all the `.ipynb` files. The notebook used to preprocess the data can be found here.
-* `scraper` contains the `scraper.py` file which was used to scrape the data from amazon.
+* [`csv_files`](https://github.com/Tasfiq-K/amazon-data-science-books-analysis/tree/main/csv_files) contains the processed and un-processed csv files.
+* [`notebooks`](https://github.com/Tasfiq-K/amazon-data-science-books-analysis/tree/main/notebooks) contains the all the `.ipynb` files. The notebook used to preprocess the data can be found here.
+* [`scraper`](https://github.com/Tasfiq-K/amazon-data-science-books-analysis/tree/main/scraper) contains the `scraper.py` file which was used to scrape the data from amazon.
 
 
 ## Problem statement
