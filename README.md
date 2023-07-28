@@ -1,8 +1,14 @@
 # Amazon Data Science Books; Analysis & Visualizations
 
+## Folder Structure
+* `csv_files` contains the processed and un-processed csv files.
+* `notebooks` contains the all the `.ipynb` files. The notebook used to preprocess the data can be found here.
+* `scraper` contains the `scraper.py` file which was used to scrape the data from amazon.
+
+
 ## Problem statement
-The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `amazon_data_science_books.csv` file. </br>
-Later we utlizied the scrape data to understand the following demographics and correlations using [Tableau](https://www.tableau.com/) Dashboard: </br>
+The goal of this project is to gather information of Data Science realted books from amazon. There are total of 1351 entries in the `csv_files/amazon_data_science_books.csv` file. </br>
+Later we utlizied the scraped data to understand the following demographics and correlations using [Tableau](https://www.tableau.com/) Dashboard: </br>
 1. A doughnut chart showing the number of books published by the top 15 publishers and the others.
 2. A barchart of top 15 publisher by the amount of books published
 3. Average price of books by the top 15 publishers
